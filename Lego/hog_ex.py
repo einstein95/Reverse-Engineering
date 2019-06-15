@@ -9,6 +9,7 @@
 ################################################################################
 
 import os
+from sys import argv
 
 from util import *
 from hog_dec import hog_dec
@@ -91,8 +92,7 @@ def hog_ex_data(f, out_dir):
 
 if __name__ == "__main__":
   
-  in_dir = "HP1GChogSamples"
-  for fn in list_all_files(in_dir):
+  for fn in list_all_files(argv[1]):
     if not os.path.splitext(fn)[1].lower() == ".hog":
       continue
     
